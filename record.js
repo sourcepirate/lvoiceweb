@@ -10,9 +10,18 @@
         minPitch = 0.8,
         maxPitch = 1.5,
         overLapRatio = 0.5,
+        btn = document.getElementById('letstart'),
         p = document.createElement('p');
     
     document.body.appendChild(p);
+
+
+    function getGesture(){
+        return new Promise((res, rej) => {
+            btn.onclick = res;
+        });
+    }
+
 
     // create a hann window to transform
     function hann(length) {
@@ -107,11 +116,11 @@
         source.start();
     }
 
+
+
     if ('MediaRecorder' in wnd) {
         // start recording
-
-        
-        getStream().then((stream) => {
+        getGesture().then(getStream).then((stream) => {
 
             // initialize the recorder
 
