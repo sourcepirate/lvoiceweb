@@ -10,7 +10,7 @@
         minPitch = 0.8,
         maxPitch = 1.5,
         overLapRatio = 0.5,
-        totalChannels = 2,
+        totalChannels = 1,
         btn = document.getElementById('letstart'),
         p = document.createElement('p');
 
