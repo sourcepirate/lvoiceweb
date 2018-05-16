@@ -65,6 +65,7 @@
             // The input buffer is the song we loaded earlier
             var inputBuffer = audioProcessingEvent.inputBuffer;
             var outputBuffer = audioProcessingEvent.outputBuffer;
+            totalChannels = inputBuffer.numberOfChannels;
 
             for (var ch = 0; ch < totalChannels; ch++) {
 
